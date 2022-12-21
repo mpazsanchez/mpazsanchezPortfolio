@@ -1,0 +1,356 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300&family=Inter:wght@200;300;400;500;600;700&family=Montserrat:wght@300&family=Poppins:wght@200;300&display=swap');
+
+/* font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+/*COLORS*/
+:root {
+    --color-gray: rgb(67, 65, 65);
+    --color-pink1: #F30487;
+    --color-pink2: #C6109F;
+    --color-violet: #8424c4;
+    
+  }
+
+body {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* LAYOUT */
+.layout-container > * {
+    padding: 25px;
+}
+
+header {
+    grid-area: header;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    grid-area: navbar;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.layout-container {
+    display: grid;
+    grid-gap: 10px;
+    min-height: 100vh;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 
+        "navbar"
+        "header"
+        "main"
+        "footer";
+}
+/* LAYOUT-END */
+
+
+
+
+/* NAVBAR */
+#navbarNav {
+    justify-content: center;
+}
+nav ul li {
+    font-size: 1.5rem;
+}
+
+nav ul li:hover {
+    border-bottom: solid var(--color-gray) 1px;
+}
+
+
+
+/* HEADER */
+header div h1 , header div h3 {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+
+header div h1 {
+    background: linear-gradient(#F30487,#C6109F,#8424c4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;  
+    -webkit-text-fill-color: transparent;
+
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+
+ 
+
+
+
+/*MAIN*/
+
+/*ABOUT ME*/
+
+.container-aboutMe h2 {
+    text-align: center;
+    color: var(--color-gray);
+}
+
+.container-aboutMe {
+    text-align: center;
+    min-height: 75vh;
+    
+}
+
+.container-aboutMe p {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1em;
+}
+
+.container-aboutMe-icons {
+    margin-top: 50px;
+}
+
+.fa-linkedin {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#icon {
+    font-size: 25px;
+}
+
+.container-aboutMe-icons a {
+    color: var(--color-pink1);
+}
+
+.container-aboutMe a:hover {
+    color: var(--color-violet);
+}
+
+
+
+
+
+/*MY PROJECTS*/
+.container-myprojects h2 {
+    text-align: center;
+    color: var(--color-gray);
+}
+
+.container-myprojects {
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.container-myprojects-cards {
+    margin-top: 1em;
+}
+
+.card h5 {
+    font-family:'Inter', sans-serif;
+}
+.card p {
+    font-family: 'Poppins', sans-serif;
+}
+.card {
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.card .btn {
+    background-color: black;
+    border: none;
+    font-weight:600;
+}
+
+.card .btn:hover {
+    background-color: var(--color-pink1);
+}
+
+
+
+/*CONTACT ME*/
+.container-contact h2 {
+    text-align: center;
+    color: var(--color-gray);
+}
+.container-contact .btn-submit {
+    margin-top: 25px;
+    background-color: black;
+    border: none;
+    font-weight:600;
+} 
+
+.container-contact .btn-submit:hover {
+    background-color: var(--color-pink1);
+
+}
+
+form label, form input {
+    font-family: 'Poppins', sans-serif;
+}
+
+.textarea1 {
+    margin-top: 25px;
+}
+
+.container-contact {
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*FOOTER*/
+footer {
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+/*Form*/
+#mymail {
+    display: none;
+}
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (min-width: 500px) {
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar-nav {
+        gap: 80px;
+    }
+
+    .container-aboutMe {
+        text-align: center;
+        min-height: 50vh;
+
+    }
+
+    .container-myprojects, .container-contact {
+        margin-top: 5em;
+    }
+
+    .container-myprojects-cards {
+        margin-top: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+
+
+
+
+}
+
+
+
+@media (min-width: 700px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .navbar-nav {
+        gap: 80px;
+    }
+    header div h1 {
+        font-size: calc(4em + 1vw);
+    }
+
+
+    .container-aboutMe h2, .container-myprojects h2, .container-contact h2 {
+        font-size: 2.5em;
+    }
+
+    .container-aboutMe p {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 1.2em;
+    }
+
+    .fa-linkedin {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    
+    #icon {
+        font-size: 30px;
+    }
+
+    
+}
+
+
+/* DESKTOP */
+@media (min-width: 900px) {
+    nav ul {
+        flex-direction: column;
+    }
+    .navbar-nav {
+        gap: 80px;
+    }
+    header div h1 {
+        font-size: calc(4em + 1vw);
+    }
+
+    .container-aboutMe h2, .container-myprojects h2, .container-contact h2  {
+        font-size: 3rem;
+    }
+
+    .container-aboutMe p, .container-myprojects , .container-contact{
+        padding-left: 150px;
+        padding-right: 150px;
+        font-size: 1.2em;
+    }
+
+    .fa-linkedin {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    
+    #icon {
+        font-size: 35px;
+    }
+
+    form {
+        padding-left: 25px;
+        padding-right: 25px;
+
+    }
+
+
+}
+
+/* RESPONSIVE-END */ 
