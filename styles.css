@@ -114,7 +114,7 @@ header div h1 {
     text-align: center;
     min-height: 45vh;
 
-    
+
     
 }
 
@@ -193,6 +193,9 @@ header div h1 {
 
 
 /*CONTACT ME*/
+.container-contact {
+    margin-top: 20px;
+}
 .container-contact h2 {
     text-align: center;
     color: var(--color-gray);
